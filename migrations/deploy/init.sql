@@ -7,7 +7,7 @@ CHECK (VALUE ~ 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([
 COMMENT ON DOMAIN url IS 'match URLs (http or https)';
 
 CREATE DOMAIN pint AS int
-CHECK (VALUE > 0);
+CHECK (VALUE >= 0);
 COMMENT ON DOMAIN pint IS 'only positive integer is accepted';
 
 CREATE TABLE "publisher" (

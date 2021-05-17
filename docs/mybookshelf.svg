@@ -1,0 +1,113 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="459" height="438" view_box="0 0 459 438"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Mon, 17 May 2021 04:36:16</desc>
+
+<rect id="frame" x="0" y="0" width="459" height="438" fill="#fefeec" stroke="none" stroke-width="0"/>
+
+<!-- Association édite -->
+<line x1="61" y1="44" x2="192" y2="44" stroke="#060100" stroke-width="1"/>
+<text x="118" y="60.0" fill="#060100" font-family="Courier New" font-size="12">1,N</text>
+<line x1="192" y1="192" x2="192" y2="44" stroke="#060100" stroke-width="1"/>
+<text x="197.0" y="95" fill="#060100" font-family="Courier New" font-size="12">1,1</text>
+<g id="association-édite">
+	<path d="M 207 18 a 14 14 90 0 1 14 14 V 44 h -58 V 32 a 14 14 90 0 1 14 -14" fill="#081a84" stroke="#081a84" stroke-width="0"/>
+	<path d="M 221 44.0 v 12 a 14 14 90 0 1 -14 14 H 177 a 14 14 90 0 1 -14 -14 V 44.0 H 58" fill="#fefeec" stroke="#fefeec" stroke-width="0"/>
+	<rect x="163" y="18" width="58" height="52" fill="none" rx="14" stroke="#060100" stroke-width="1.5"/>
+	<line x1="163" y1="44" x2="221" y2="44" stroke="#060100" stroke-width="1"/>
+	<text x="170" y="36.6" fill="#fefeec" font-family="Courier New" font-size="14">édite</text>
+</g>
+
+<!-- Association appartient -->
+<line x1="192" y1="192" x2="373" y2="192" stroke="#060100" stroke-width="1"/>
+<text x="295" y="208.0" fill="#060100" font-family="Courier New" font-size="12">1,N</text>
+<line x1="373" y1="44" x2="373" y2="192" stroke="#060100" stroke-width="1"/>
+<text x="378.0" y="86" fill="#060100" font-family="Courier New" font-size="12">0,N</text>
+<g id="association-appartient">
+	<path d="M 409 166 a 14 14 90 0 1 14 14 V 192 h -100 V 180 a 14 14 90 0 1 14 -14" fill="#081a84" stroke="#081a84" stroke-width="0"/>
+	<path d="M 423 192.0 v 12 a 14 14 90 0 1 -14 14 H 337 a 14 14 90 0 1 -14 -14 V 192.0 H 100" fill="#fefeec" stroke="#fefeec" stroke-width="0"/>
+	<rect x="323" y="166" width="100" height="52" fill="none" rx="14" stroke="#060100" stroke-width="1.5"/>
+	<line x1="323" y1="192" x2="423" y2="192" stroke="#060100" stroke-width="1"/>
+	<text x="330" y="184.6" fill="#fefeec" font-family="Courier New" font-size="14">appartient</text>
+</g>
+
+<!-- Association a écrit -->
+<line x1="373" y1="367" x2="192" y2="367" stroke="#060100" stroke-width="1"/>
+<text x="268" y="383.0" fill="#060100" font-family="Courier New" font-size="12">1,N</text>
+<line x1="192" y1="192" x2="192" y2="367" stroke="#060100" stroke-width="1"/>
+<text x="197.0" y="297" fill="#060100" font-family="Courier New" font-size="12">1,N</text>
+<g id="association-a écrit">
+	<path d="M 215 341 a 14 14 90 0 1 14 14 V 367 h -74 V 355 a 14 14 90 0 1 14 -14" fill="#081a84" stroke="#081a84" stroke-width="0"/>
+	<path d="M 229 367.0 v 12 a 14 14 90 0 1 -14 14 H 169 a 14 14 90 0 1 -14 -14 V 367.0 H 74" fill="#fefeec" stroke="#fefeec" stroke-width="0"/>
+	<rect x="155" y="341" width="74" height="52" fill="none" rx="14" stroke="#060100" stroke-width="1.5"/>
+	<line x1="155" y1="367" x2="229" y2="367" stroke="#060100" stroke-width="1"/>
+	<text x="162" y="359.6" fill="#fefeec" font-family="Courier New" font-size="14">a écrit</text>
+</g>
+
+<!-- Entity GENRE -->
+<g id="entity-GENRE">
+	<g id="frame-GENRE">
+		<rect x="338" y="18" width="70" height="26" fill="#c6281b" stroke="#c6281b" stroke-width="0"/>
+		<rect x="338" y="44.0" width="70" height="26" fill="#fced5f" stroke="#fced5f" stroke-width="0"/>
+		<rect x="338" y="18" width="70" height="52" fill="none" stroke="#060100" stroke-width="1.5"/>
+		<line x1="338" y1="44" x2="408" y2="44" stroke="#060100" stroke-width="1"/>
+	</g>
+	<text x="351" y="36.6" fill="#fefeec" font-family="Courier New" font-size="14">GENRE</text>
+	<text x="343" y="62.6" fill="#060100" font-family="Courier New" font-size="14">libellé</text>
+	<line x1="343" y1="65.0" x2="403" y2="65.0" stroke="#060100" stroke-width="1"/>
+</g>
+
+<!-- Entity ÉDITEUR -->
+<g id="entity-ÉDITEUR">
+	<g id="frame-ÉDITEUR">
+		<rect x="9" y="9" width="104" height="26" fill="#c6281b" stroke="#c6281b" stroke-width="0"/>
+		<rect x="9" y="35.0" width="104" height="44" fill="#fced5f" stroke="#fced5f" stroke-width="0"/>
+		<rect x="9" y="9" width="104" height="70" fill="none" stroke="#060100" stroke-width="1.5"/>
+		<line x1="9" y1="35" x2="113" y2="35" stroke="#060100" stroke-width="1"/>
+	</g>
+	<text x="31" y="27.6" fill="#fefeec" font-family="Courier New" font-size="14">ÉDITEUR</text>
+	<text x="14" y="53.6" fill="#060100" font-family="Courier New" font-size="14">nom</text>
+	<line x1="14" y1="56.0" x2="40" y2="56.0" stroke="#060100" stroke-width="1"/>
+	<text x="14" y="71.6" fill="#060100" font-family="Courier New" font-size="14">nationalité</text>
+</g>
+
+<!-- Entity AUTEUR -->
+<g id="entity-AUTEUR">
+	<g id="frame-AUTEUR">
+		<rect x="296" y="305" width="154" height="26" fill="#c6281b" stroke="#c6281b" stroke-width="0"/>
+		<rect x="296" y="331.0" width="154" height="98" fill="#fced5f" stroke="#fced5f" stroke-width="0"/>
+		<rect x="296" y="305" width="154" height="124" fill="none" stroke="#060100" stroke-width="1.5"/>
+		<line x1="296" y1="331" x2="450" y2="331" stroke="#060100" stroke-width="1"/>
+	</g>
+	<text x="347" y="323.6" fill="#fefeec" font-family="Courier New" font-size="14">AUTEUR</text>
+	<text x="301" y="349.6" fill="#060100" font-family="Courier New" font-size="14">prénom</text>
+	<line x1="301" y1="352.0" x2="353" y2="352.0" stroke="#060100" stroke-width="1"/>
+	<text x="301" y="367.6" fill="#060100" font-family="Courier New" font-size="14">nom</text>
+	<text x="301" y="385.6" fill="#060100" font-family="Courier New" font-size="14">nationalité</text>
+	<text x="301" y="403.6" fill="#060100" font-family="Courier New" font-size="14">date de naissance</text>
+	<text x="301" y="421.6" fill="#060100" font-family="Courier New" font-size="14">date de mort</text>
+</g>
+
+<!-- Entity LIVRE -->
+<g id="entity-LIVRE">
+	<g id="frame-LIVRE">
+		<rect x="94" y="103" width="196" height="26" fill="#c6281b" stroke="#c6281b" stroke-width="0"/>
+		<rect x="94" y="129.0" width="196" height="152" fill="#fced5f" stroke="#fced5f" stroke-width="0"/>
+		<rect x="94" y="103" width="196" height="178" fill="none" stroke="#060100" stroke-width="1.5"/>
+		<line x1="94" y1="129" x2="290" y2="129" stroke="#060100" stroke-width="1"/>
+	</g>
+	<text x="170" y="121.6" fill="#fefeec" font-family="Courier New" font-size="14">LIVRE</text>
+	<text x="99" y="147.6" fill="#060100" font-family="Courier New" font-size="14">reference</text>
+	<line x1="99" y1="150.0" x2="176" y2="150.0" stroke="#060100" stroke-width="1"/>
+	<text x="99" y="165.6" fill="#060100" font-family="Courier New" font-size="14">titre</text>
+	<text x="99" y="183.6" fill="#060100" font-family="Courier New" font-size="14">année de parution</text>
+	<text x="99" y="201.6" fill="#060100" font-family="Courier New" font-size="14">nombre de pages</text>
+	<text x="99" y="219.6" fill="#060100" font-family="Courier New" font-size="14">nombre de chapitres</text>
+	<text x="99" y="237.6" fill="#060100" font-family="Courier New" font-size="14">première de couverture</text>
+	<text x="99" y="255.6" fill="#060100" font-family="Courier New" font-size="14">image de couverture</text>
+	<text x="99" y="273.6" fill="#060100" font-family="Courier New" font-size="14">locale</text>
+</g>
+</svg>
