@@ -1,0 +1,37 @@
+{
+  "name": "mybookshelf",
+  "version": "1.0.0",
+  "description": "Ceci est une API de gestion de bibliothèque ouverte à tous.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node .",
+    "dev": "node-dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghsdl/portfolio.git"
+  },
+  "keywords": [
+    "API",
+    "bookshelf",
+    "book management",
+    "public"
+  ],
+  "author": "ghsdl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghsdl/portfolio/issues"
+  },
+  "homepage": "https://github.com/ghsdl/portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "dotenv": "^9.0.2"
+  }
+}
