@@ -1,5 +1,5 @@
 const express = require('express');
-const { authorSchema } = require('../validations/schemas');
+const { authorInsertSchema, authorUpdateSchema } = require('../validations/schemas');
 const validate = require('../validations/validate');
 const authorController = require('../controllers/authorController');
 const errorController = require('../controllers/errorController');
@@ -9,11 +9,12 @@ const router = express.Router();
 // ROUTES
 router.route('/authors')
     .get(authorController.getAll)
-    .post(validate.body(authorSchema), authorController.add);
+    .post(validate.body(authorInsertSchema), authorController.add);
 
 router.route('/authors/:id(\\d+)')
     .get(authorController.getById)
-    //.delete(authorController.delete);
+    .patch(validate.body(authorUpdateSchema), authorController.update)
+    .delete(authorController.delete);
 
 router.use(errorController.resourceNotFound);
 

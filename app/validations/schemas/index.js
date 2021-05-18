@@ -1,3 +1,11 @@
-const authorSchema = require('./authorSchema');
+const { 
+    insertSchema: authorInsertSchema, 
+    updateSchema: authorUpdateSchema,
+}  = require('./authorSchema');
 
-module.exports = { authorSchema };
+/*const { 
+    insertSchema: publisherInsertSchema, 
+    updateSchema: publisherUpdateSchema,
+}  = require('./publisherSchema');*/
+
+module.exports = { authorInsertSchema, authorUpdateSchema };

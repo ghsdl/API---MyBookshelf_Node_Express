@@ -4,8 +4,8 @@ module.exports = {
 
     async getAll(_, res) {
         try {
-            const data = await AuthorModel.find();
-            res.json({ data });
+            const authors = await AuthorModel.find();
+            res.json({ authors });
         } catch (error) {
             console.trace(error);
             res.json({ error });
@@ -14,42 +14,67 @@ module.exports = {
 
     async getById(req, res, next) {
         try {
-            const data = await AuthorModel.findByPk(req.params.id);
-            if(!data) {
+            const author = await AuthorModel.findByPk(req.params.id);
+            if(!author) {
                 return next();
             }
-            res.json( { data: data.dataValues });
+            res.json( { data: author.dataValues });
         } catch (error) {
             console.trace(error);
             res.json({ error });
         }
     },
 
-    async add(request, response){
+    async add(req, res){
         try {
-            const author = new AuthorModel(request.body);
+            const author = new AuthorModel(req.body);
             await author.insert();
-            response.json({ data: author.dataValues });
-        }catch(error){
+            res.json({ data: author.dataValues });
+        } catch(error) {
             console.trace(error);
         
-            if(error.code === '23505'){
+            if (error.code === '23505'){
                 error = `This resource already exists.`;
-            }else{
+            } else {
                 error = `A server error occured, please retry later.`;
             }
-            response.json({ error });
+            res.json({ error });
         }
     },
 
-    /*async delete(req, res) {
+    async update(req, res, next) {
         try {
-            const data = await AuthorModel.remove(req.params.id)
-            res.json( { message: 'Deleted successfully!' });
+            const author = await AuthorModel.findByPk(req.params.id);
+
+            if(!author) {
+                return next();
+            }
+
+            author.data = req.body;
+            await author.update();
+            res.json({ data: author.dataValues });
         } catch (error) {
             console.trace(error);
+            error = `A server error occured, please retry later.`;
             res.json({ error });
         }
-    }*/
+    },
+
+    async delete(req, res, next) {
+        try {
+            const author = await AuthorModel.findByPk(req.params.id);
+
+            if(!author) {
+                return next();
+            }
+
+            await author.delete();
+            res.status(204).json();
+        } catch (error) {
+            console.trace(error);
+            error = `A server error occured, please retry later.`;
+            res.json({ error });
+        }
+    }
 
 }
