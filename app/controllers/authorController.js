@@ -12,15 +12,44 @@ module.exports = {
         }
     },
 
-    async getById(req, res) {
+    async getById(req, res, next) {
         try {
-            const id = parseInt(req.params.id, 10);
-
-            const data = await AuthorModel.find();
+            const data = await AuthorModel.findByPk(req.params.id);
+            if(!data) {
+                return next();
+            }
+            res.json( { data: data.dataValues });
         } catch (error) {
             console.trace(error);
             res.json({ error });
         }
-    }
+    },
+
+    async add(request, response){
+        try {
+            const author = new AuthorModel(request.body);
+            await author.insert();
+            response.json({ data: author.dataValues });
+        }catch(error){
+            console.trace(error);
+        
+            if(error.code === '23505'){
+                error = `This resource already exists.`;
+            }else{
+                error = `A server error occured, please retry later.`;
+            }
+            response.json({ error });
+        }
+    },
+
+    /*async delete(req, res) {
+        try {
+            const data = await AuthorModel.remove(req.params.id)
+            res.json( { message: 'Deleted successfully!' });
+        } catch (error) {
+            console.trace(error);
+            res.json({ error });
+        }
+    }*/
 
 }
