@@ -18,5 +18,4 @@ CREATE FUNCTION book_preview() RETURNS SETOF book AS $$
     SELECT * FROM "book" ORDER BY random() LIMIT 3
 $$ LANGUAGE sql;
 
-
 COMMIT;

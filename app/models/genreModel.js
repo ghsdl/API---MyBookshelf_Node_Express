@@ -4,8 +4,12 @@ class GenreModel extends CoreModel {
 
     static tableName = 'genre';
 
-    constructor(){
-        super();
+    static fields = [
+        'label'
+    ];
+
+    constructor(obj){
+        super(obj);
     }
 
 }

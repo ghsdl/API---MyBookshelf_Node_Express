@@ -42,7 +42,7 @@ class CoreModel {
         return new this(result.rows[0]);
     };
 
-    /* PREMIERE POSSIBLITE
+    /* PREMIERE POSSIBLITE A LA MANO */
     
     async insert() {
 
@@ -62,11 +62,11 @@ class CoreModel {
         this.dataValues = result.rows[0];
         console.log(this.dataValues);
 
-    };*/
+    };
 
-    /* SECONDE POSSIBLITE AVEC FUNCTION SQL */
+    /* SECONDE POSSIBLITE AVEC FUNCTION SQL*/
 
-    async insert() {
+    /*async insert() {
 
         const preparedQuery = {
 
@@ -79,7 +79,12 @@ class CoreModel {
         const result = await client.query(preparedQuery);
         this.dataValues = result.rows[0];
         console.log(this.dataValues);
-    }
+    }*/
+
+    /* PREMIERE POSSIBLITE A LA MANO */
+
+
+    /* SECONDE POSSIBLITE AVEC FUNCTION SQL*/
 
     async update() {
 
@@ -95,6 +100,11 @@ class CoreModel {
         this.dataValues = result.rows[0];
 
     }
+    
+    /* PREMIERE POSSIBLITE A LA MANO */
+
+
+    /* SECONDE POSSIBLITE AVEC FUNCTION SQL*/
 
     async delete() {
         
