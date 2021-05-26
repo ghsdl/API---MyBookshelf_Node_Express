@@ -2,8 +2,8 @@
 
 BEGIN;
 
-CREATE DOMAIN url AS text
-CHECK (VALUE ~ 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)');
+CREATE DOMAIN url AS text 
+CHECK (VALUE ~ 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,255}\.[a-z]{2,9}\y([-a-zA-Z0-9@:%_\+.,~#?!&>//=]*)$');
 COMMENT ON DOMAIN url IS 'match URLs (http or https)';
 
 CREATE DOMAIN pint AS int

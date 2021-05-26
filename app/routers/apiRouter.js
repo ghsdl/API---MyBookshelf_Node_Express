@@ -1,9 +1,10 @@
 const express = require('express');
-const { authorInsertSchema, authorUpdateSchema , publisherInsertSchema, publisherUpdateSchema, genreInsertSchema, genreUpdateSchema} = require('../validations/schemas');
+const { authorInsertSchema, authorUpdateSchema , publisherInsertSchema, publisherUpdateSchema, genreInsertSchema, genreUpdateSchema, bookInsertSchema, bookUpdateSchema} = require('../validations/schemas');
 const validate = require('../validations/validate');
 const authorController = require('../controllers/authorController');
 const publisherController = require('../controllers/publisherController');
 const genreController = require('../controllers/genreController');
+const bookController = require('../controllers/bookController');
 const errorController = require('../controllers/errorController');
 
 const router = express.Router();
@@ -28,7 +29,7 @@ router.route('/publishers/:id(\\d+)')
     .patch(validate.body(publisherUpdateSchema), publisherController.update)
     .delete(publisherController.delete);
 
-// GENRES ROUTES
+// GENRE ROUTES
 router.route('/genres')
     .get(genreController.getAll)
     .post(validate.body(genreInsertSchema), genreController.add);
@@ -37,6 +38,16 @@ router.route('/genres/:id(\\d+)')
     .get(genreController.getById)
     .patch(validate.body(genreUpdateSchema), genreController.update)
     .delete(genreController.delete);
+
+// BOOK ROUTES
+router.route('/books')
+    .get(bookController.getAll)
+    .post(validate.body(bookInsertSchema), bookController.add);
+
+router.route('/books/:id(\\d+)')
+    .get(bookController.getById)
+    .patch(validate.body(bookUpdateSchema), bookController.update)
+    .delete(bookController.delete);
 
 router.use(errorController.resourceNotFound);
 

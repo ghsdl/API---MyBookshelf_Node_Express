@@ -4,8 +4,6 @@ class CoreModel {
 
     dataValues = {};
 
-    previousDataValues = {};
-
     constructor(obj) {
         for (const prop in obj) {
             this.dataValues[prop] = obj[prop];
@@ -21,7 +19,7 @@ class CoreModel {
     };
 
     static async find(options) {
-        const result = await client.query(`SELECT * FROM ${this.tableName} WHERE deleted_at IS NULL`);
+        const result = await client.query(`SELECT * FROM ${this.tableName}`);
 
         const instanceList = [];
 
@@ -44,34 +42,28 @@ class CoreModel {
 
     /* PREMIERE POSSIBLITE A LA MANO */
     
+    /*async insert() {
+        
+        const preparedQuery = {
+
+            text: `INSERT INTO ${this.constructor.tableName} 
+                (${this.constructor.fields}) VALUES 
+                (${this.constructor.fields.map((field, fieldIndex) => '$' + (fieldIndex+1))}) RETURNING *`,
+            values: this.constructor.fields.map(field => this.dataValues[field])
+        };
+        const result = await client.query(preparedQuery);
+        this.dataValues = result.rows[0];
+
+    };*/
+
+    /* SECONDE POSSIBLITE AVEC FUNCTION SQL*/
+
     async insert() {
 
         const preparedQuery = {
 
             text: `
-                INSERT INTO ${this.constructor.tableName} 
-                (${this.constructor.fields}) VALUES 
-                (${this.constructor.fields.map((field, fieldIndex) => '$' + (fieldIndex+1))})
-            `,
-            values: this.constructor.fields.map(field => this.dataValues[field])
-        };
-
-        console.log(preparedQuery);
-
-        const result = await client.query(preparedQuery);
-        this.dataValues = result.rows[0];
-        console.log(this.dataValues);
-
-    };
-
-    /* SECONDE POSSIBLITE AVEC FUNCTION SQL*/
-
-    /*async insert() {
-
-        const preparedQuery = {
-
-            text: `
-                SELECT * FROM add_${this.constructor.tableName}($1)
+                SELECT * FROM add_${this.constructor.tableName} ($1)
             `,
             values: [this.dataValues]
         };
@@ -79,12 +71,7 @@ class CoreModel {
         const result = await client.query(preparedQuery);
         this.dataValues = result.rows[0];
         console.log(this.dataValues);
-    }*/
-
-    /* PREMIERE POSSIBLITE A LA MANO */
-
-
-    /* SECONDE POSSIBLITE AVEC FUNCTION SQL*/
+    }
 
     async update() {
 
@@ -98,13 +85,8 @@ class CoreModel {
 
         const result = await client.query(preparedQuery);
         this.dataValues = result.rows[0];
-
+        console.log(this.dataValues);
     }
-    
-    /* PREMIERE POSSIBLITE A LA MANO */
-
-
-    /* SECONDE POSSIBLITE AVEC FUNCTION SQL*/
 
     async delete() {
         
