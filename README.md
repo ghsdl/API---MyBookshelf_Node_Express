@@ -1,6 +1,6 @@
 # MyBookshelf
 
-Ceci est une API de gestion de bibliothèque ouverte à tous.
+MyBookshelf est une API de gestion de bibliothèque ouverte à tous.
 
 ## Author
 
@@ -21,19 +21,19 @@ Ceci est une API de gestion de bibliothèque ouverte à tous.
 Clone the project
 
 ```bash
-  git clone https://github.com/ghsdl/portfolio
+  git clone https://github.com/ghsdl/API---MyBookshelf_Node_Express.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd  API---MyBookshelf_Node_Express
 ```
 
 Installez la base de données PostgreSQL
 
 ```bash
-createdb my_bookshelf
+createdb mybookshelf
 ```
 
 Install dependencies
@@ -47,11 +47,3 @@ Start the server
 ```bash
   npm run start
 ```
-
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`

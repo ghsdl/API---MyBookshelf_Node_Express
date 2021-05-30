@@ -19,7 +19,16 @@ class CoreModel {
     };
 
     static async find(options) {
-        const result = await client.query(`SELECT * FROM ${this.tableName}`);
+
+        const result = await client.query(`SELECT * FROM ${this.tableName}`); 
+        
+        /*const result = await client.query(`
+        SELECT b.*, bha.author_id, bhg.genre_id 
+        FROM ${this.tableName} AS b 
+        JOIN book_has_author AS bha
+        ON b.id = bha.author_id
+        JOIN book_has_genre AS bhg
+        ON b.id = bhg.genre_id`);*/
 
         const instanceList = [];
 
