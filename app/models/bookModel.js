@@ -73,16 +73,16 @@ class BookModel extends CoreModel {
         try {
         const result = await client.query(`
             SELECT
-                b.*,
+                book.*,
                 array_agg(DISTINCT a.id) AS author_id,
                 array_agg(DISTINCT g.id) AS genre_id
             FROM ${this.tableName}
-            JOIN book_has_author AS bha ON b.id = bha.book_id
-            JOIN book_has_genre AS bhg ON b.id = bhg.book_id
+            JOIN book_has_author AS bha ON book.id = bha.book_id
+            JOIN book_has_genre AS bhg ON book.id = bhg.book_id
             JOIN author AS a ON a.id = bha.author_id
             JOIN genre AS g ON g.id = bhg.genre_id
             WHERE book.deleted_at IS NULL
-            GROUP BY b.id
+            GROUP BY book.id
         `);
 
         const instanceList = [];
