@@ -19,7 +19,7 @@ app.use('/api', apiRouter);
 let options = {
     swaggerDefinition: {
         info: {
-            description: 'Cette api permet de gérer une bibliothèque.',
+            description: 'MyBookshelf is a library management API available for everyone.',
             title: 'My Bookshelf',
             version: '1.0.0',
         },

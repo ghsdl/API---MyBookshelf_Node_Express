@@ -1,6 +1,6 @@
 # MyBookshelf
 
-MyBookshelf est une API de gestion de bibliothèque ouverte à tous.
+MyBookshelf is a library management API available for everyone.
 
 ## Author
 
@@ -30,7 +30,7 @@ Go to the project directory
   cd  API---MyBookshelf_Node_Express
 ```
 
-Installez la base de données PostgreSQL
+Install the PostgreSQL database
 
 ```bash
 createdb mybookshelf

@@ -2,35 +2,35 @@ const CoreModel = require('./coreModel');
 
 /**
  * @typedef Author
- * @property {number} id - Identifiant unique
- * @property {string} firstname - Prénom de l'auteur
- * @property {string} lastname - Nom de famille de l'auteur
- * @property {string} country_iso_2 - Pays d'origine de l'auteur (ISO 3166 Alpha-2)
- * @property {string} birthdate - Date de naissance de l'auteur (YYYY-MM-DD)
- * @property {string} deathdate - Date de mort de l'auteur (YYYY-MM-DD)
- * @property {string} created_at - Date de création de l'auteur (date ISO 8601)
- * @property {string} updated_at - Date de mise à jour de l'auteur (date ISO 8601)
- * @property {string} deleted_at - Date de suppression de l'auteur (date ISO 8601)
+ * @property {number} id - Unique identifier
+ * @property {string} firstname - Author firstname
+ * @property {string} lastname - Author lastname
+ * @property {string} country_iso_2 - Author country name (ISO 3166 Alpha-2)
+ * @property {string} birthdate - Author birthdate (YYYY-MM-DD)
+ * @property {string} deathdate - Author deathdate (YYYY-MM-DD)
+ * @property {string} created_at - Author creation date (date ISO 8601)
+ * @property {string} updated_at - Author updated date (date ISO 8601)
+ * @property {string} deleted_at - Author deleted date (date ISO 8601)
  */
 
 /**
  * @typedef AuthorInput
- * @property {string} firstname - Prénom de l'auteur
- * @property {string} lastname - Nom de famille de l'auteur
- * @property {string} country_iso_2 - Pays d'origine de l'auteur (ISO 3166 Alpha-2)
- * @property {string} birthdate - Date de naissance de l'auteur (YYYY-MM-DD)
- * @property {string} deathdate - Date de mort de l'auteur (YYYY-MM-DD)
+ * @property {string} firstname - Author firstname
+ * @property {string} lastname - Author lastname
+ * @property {string} country_iso_2 - Author country name (ISO 3166 Alpha-2)
+ * @property {string} birthdate - Author birthdate (YYYY-MM-DD)
+ * @property {string} deathdate - Author deathdate (YYYY-MM-DD)
  */
 
 class AuthorModel extends CoreModel {
 
     /**
-     * Nom de la table dans la BDD
+     * Database table name
      */
     static tableName = 'author';
 
     /**
-     * Listes des champs de l'entité 
+     * Lists of entity fields
      */
     static fields = [
         'firstname',
@@ -41,7 +41,7 @@ class AuthorModel extends CoreModel {
     ];
 
     /**
-     * Initialisation/instanciation de la classe
+     * Class instanciation
      * @param {object} obj 
      */
     constructor(obj){
@@ -49,7 +49,7 @@ class AuthorModel extends CoreModel {
     }
 
     /**
-     * Getter permettant de récupérer le nom complet d'un auteur
+     * Getter to get complete author name
      */
     get fullname(){
         this.dataValues.firstname + ' ' + this.dataValues.lastname;

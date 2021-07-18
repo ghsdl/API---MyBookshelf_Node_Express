@@ -8,8 +8,7 @@ INSERT INTO "publisher" ("name", "country_iso_2") VALUES
 
 INSERT INTO "genre" ("label")
 VALUES ('heroic-fantasy'), 
-('médieval fantastique');
-
+('médieval-fantastique');
 
 INSERT INTO "book" ("title", "publisher_id", "reference", "year", "locale", "page_count", "chapter_count", "front_cover") VALUES
 ('Le trône de fer',1,'5591', 1996,'fr_FR', 600, 0, 'NA'),
